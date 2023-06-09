@@ -3,4 +3,14 @@
   margin: 0;
   padding: 0; }
 
+.header__title {
+  text-align: center;
+  padding: 20px;
+  color: lightcoral;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
+.header__image {
+  width: 100%;
+  height: 50vh; }
+
 /*# sourceMappingURL=main.css.map */
