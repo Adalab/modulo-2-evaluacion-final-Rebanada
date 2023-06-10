@@ -1,0 +1,9 @@
+.footer{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.footer_text{
+    font-family: $primary-text;
+    color: blueviolet;
+}
