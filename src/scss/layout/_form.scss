@@ -1,0 +1,15 @@
+.form{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    height: 30px;
+}
+
+.form_input{
+    background-color: lightpink;
+    border-radius: 5px;
+}
+.form_button{
+border-radius: 5px;
+background-color: lightskyblue;
+}
