@@ -37,9 +37,6 @@ header {
   border: 3px solid lightcoral;
   margin: 30px;
   background-color: lightpink; }
-  @media all and (min-width: 768pxpx) {
-    .disney_favorite {
-      width: 30%; } }
 
 .disney_characters {
   border: 3px solid lightcoral;
@@ -60,16 +57,16 @@ header {
 
 .disney_favorite_list {
   list-style-type: none;
-  margin: 10px;
-  display: flex;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  width: 50vh; }
 
 .disney_characters_list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 50vh;
   list-style-type: none; }
 
 .form {
