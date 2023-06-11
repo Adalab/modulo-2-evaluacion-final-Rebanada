@@ -1,5 +1,5 @@
 // VARIABLES
-const resultsList = document.querySelector('.js-results-list');
+const resultsList = document.querySelector('.js-characters-list');
 const inputDisney = document.querySelector('.js-input');
 const btnSearch = document.querySelector('.js-btn-search');
 const favoriteList = document.querySelector('.js-favorite-list');
@@ -32,10 +32,10 @@ function renderDisney() {
         ? oneDisney.imageUrl[0].url
         : 'https://via.placeholder.com/210x295/ffffff/555555/?text=Disney';
 
-    html += `<li class="js-list-disney disney__results-list" id="${oneDisney._id}">
-              <div class="js-container-disney disney__results-list-container">
-                <h3 class="js-title-disney disney__results-list-title" id="${oneDisney._id}">${oneDisney.name}</h3>
-                <img class="disney__results-list-image" src="${oneDisney.imageUrl}" alt="Disney Character ${oneDisney.name}" title="Disney Character ${oneDisney.name}"/>
+    html += `<li class="js-list-disney disney_characters_list" id="${oneDisney._id}">
+              <div class="js-container-disney">
+                <h3 class="js-name-disney disney_characters-list-name" id="${oneDisney._id}">${oneDisney.name}</h3>
+                <img class="disney_characters-list-image" src="${oneDisney.imageUrl}" alt="Disney Character ${oneDisney.name}" title="Disney Character ${oneDisney.name}"/>
               </div>
             </li>`;
   }

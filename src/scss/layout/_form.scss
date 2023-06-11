@@ -3,6 +3,8 @@
     justify-content: center;
     gap: 15px;
     height: 30px;
+    padding-bottom: 5px;
+    background-color: $secundary-color;
 }
 
 .form_input{
@@ -11,5 +13,5 @@
 }
 .form_button{
 border-radius: 5px;
-background-color: $secundary-color;
+background-color: $coral;
 }

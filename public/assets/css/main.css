@@ -13,6 +13,9 @@
   width: 100%;
   height: 50vh; }
 
+header {
+  background-color: lightskyblue; }
+
 .footer {
   display: flex;
   text-align: center;
@@ -22,11 +25,60 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: blueviolet; }
 
+.disney {
+  display: flex;
+  background-color: peachpuff;
+  flex-direction: column; }
+  @media all and (min-width: 768px) {
+    .disney {
+      flex-direction: row; } }
+
+.disney_favorite {
+  border: 3px solid lightcoral;
+  margin: 30px;
+  background-color: lightpink; }
+  @media all and (min-width: 768pxpx) {
+    .disney_favorite {
+      width: 30%; } }
+
+.disney_characters {
+  border: 3px solid lightcoral;
+  margin: 30px;
+  background-color: lightpink; }
+
+.disney_favorite_title {
+  background-color: lightskyblue;
+  color: lightcoral;
+  font-size: 30px;
+  text-align: center; }
+
+.disney_characters_title {
+  background-color: lightskyblue;
+  color: lightcoral;
+  font-size: 30px;
+  text-align: center; }
+
+.disney_favorite_list {
+  list-style-type: none;
+  margin: 10px;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.disney_characters_list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none; }
+
 .form {
   display: flex;
   justify-content: center;
   gap: 15px;
-  height: 30px; }
+  height: 30px;
+  padding-bottom: 5px;
+  background-color: lightskyblue; }
 
 .form_input {
   background-color: lightpink;
@@ -34,6 +86,6 @@
 
 .form_button {
   border-radius: 5px;
-  background-color: lightskyblue; }
+  background-color: lightcoral; }
 
 /*# sourceMappingURL=main.css.map */

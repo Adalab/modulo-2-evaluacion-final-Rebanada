@@ -1,0 +1,51 @@
+.disney {
+  display: flex;
+  background-color: $peach;
+  flex-direction: column;
+  @media all and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+.disney_favorite {
+  border: 3px solid $coral;
+  margin: 30px;
+  background-color: $primary-color;
+  @media all and (min-width: 768pxpx) {
+    width: 30%;
+  }
+}
+.disney_characters {
+  border: 3px solid $coral;
+  margin: 30px;
+  background-color: $primary-color;
+
+ }
+
+.disney_favorite_title {
+  background-color: $secundary-color;
+  color: $coral;
+  font-size: 30px;
+  text-align: center;
+}
+.disney_characters_title {
+  background-color: $secundary-color;
+  color: $coral;
+  font-size: 30px;
+  text-align: center;
+}
+
+.disney_favorite_list {
+  list-style-type: none;
+  margin: 10px;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.disney_characters_list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
