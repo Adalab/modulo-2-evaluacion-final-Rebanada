@@ -25,11 +25,13 @@
   background-color: $secundary-color;
   color: $coral;
   font-size: 30px;
+  border-radius: 10px;
   text-align: center;
 }
 .disney_characters_title {
   background-color: $secundary-color;
   color: $coral;
+  border-radius: 10px;
   font-size: 30px;
   text-align: center;
 }
@@ -56,4 +58,6 @@
   background-color: $favorite-image;
   font-family: $primary-text;
   color: blueviolet;
+  margin: 10px;
+  border-radius: 10px;
 }
