@@ -36,11 +36,13 @@ header {
 .disney_favorite {
   border: 3px solid lightcoral;
   margin: 30px;
+  padding: 20px;
   background-color: lightpink; }
 
 .disney_characters {
   border: 3px solid lightcoral;
   margin: 30px;
+  padding: 20px;
   background-color: lightpink; }
 
 .disney_favorite_title {
@@ -60,7 +62,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50vh; }
+  width: 50vh;
+  background-color: lightgreen; }
 
 .disney_characters_list {
   display: flex;
