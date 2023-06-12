@@ -89,7 +89,7 @@ function renderFavoriteDisney(favoritesDisney) {
         ? oneDisney.imageUrl[0].url
         : 'https://via.placeholder.com/210x295/ffffff/555555/?text=Disney';
 
-    html += `<li class="js-list-disney js_li_characters disney_favorite_list" id="${oneDisney._id}">
+    html += `<li class="js-list-disney js_li_characters fav_card disney_favorite_list" id="${oneDisney._id}">
               <div class="js-container-disney">
                 <h3 class="js-name-disney disney_characters-list-name" id="${oneDisney._id}">${oneDisney.name}</h3>
                 <img class="disney_characters-list-image" src="${oneDisney.imageUrl}" alt="Disney Character ${oneDisney.name}" title="Disney Character ${oneDisney.name}"/>
