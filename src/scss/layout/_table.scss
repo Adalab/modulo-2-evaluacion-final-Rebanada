@@ -11,15 +11,13 @@
   margin: 30px;
   padding: 20px;
   background-color: $primary-color;
- 
 }
 .disney_characters {
   border: 3px solid $coral;
   margin: 30px;
   padding: 20px;
   background-color: $primary-color;
-
- }
+}
 
 .disney_favorite_title {
   background-color: $secundary-color;
@@ -45,19 +43,26 @@
   gap: 10px;
 }
 .disney_characters_list {
-    display: flex;
-    font-family: $primary-text;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 50vh;
-    list-style-type: none;
-  
+  display: flex;
+  font-family: $primary-text;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50vh;
+  list-style-type: none;
 }
 
-.fav_card{
+.fav_card {
   background-color: $favorite-image;
   font-family: $primary-text;
-  color: blueviolet;
+  color: $grape;
   margin: 10px;
   border-radius: 10px;
+}
+
+.icon {
+  color: red;
+
+  &:hover {
+    color: black;
+  }
 }

@@ -1,17 +1,17 @@
-.form{
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    height: 30px;
-    padding-bottom: 5px;
-    background-color: $secundary-color;
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  height: 30px;
+  padding-bottom: 5px;
+  background-color: $secundary-color;
 }
 
-.form_input{
-    background-color: $primary-color;
-    border-radius: 5px;
+.form_input {
+  background-color: $primary-color;
+  border-radius: 5px;
 }
-.form_button{
-border-radius: 5px;
-background-color: $coral;
+.form_button {
+  border-radius: 5px;
+  background-color: $coral;
 }

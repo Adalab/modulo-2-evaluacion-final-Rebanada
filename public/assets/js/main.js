@@ -8,20 +8,29 @@ const url = `https://dev.adalab.es/api/disney?pageSize=15`;
 let dataDisney = [];
 let favoritesDisney = [];
 
-//pintar el favorite que se guarda en el LS
-
 const charactersLS = JSON.parse(localStorage.getItem('characters'));
 
+//pintar el favorite que se guarda en el LS
 init();
 
 function init() {
-  if(charactersLS){
+  if (charactersLS) {
     favoritesDisney = charactersLS;
     renderFavoriteDisney(favoritesDisney);
   }
 }
+//Quitar de favoritos pulsando en los fav
+function handleClickRemoveFavorite(id) {
+  const idSelected = parseInt(id);
 
-
+  const favoriteFoundIndex = favoritesDisney.findIndex((fav)=> fav._id === idSelected);
+  if(favoriteFoundIndex >= 0){
+    favoritesDisney.splice(favoriteFoundIndex,1);
+  }
+  localStorage.setItem('favorites_disney', JSON.stringify(favoritesDisney));
+  
+  renderFavoriteDisney();
+}
 
 // FUNCIONES
 // Renderizar la lista de personajes
@@ -93,6 +102,7 @@ function renderFavoriteDisney(favoritesDisney) {
               <div class="js-container-disney">
                 <h3 class="js-name-disney disney_characters-list-name" id="${oneDisney._id}">${oneDisney.name}</h3>
                 <img class="disney_characters-list-image" src="${oneDisney.imageUrl}" alt="Disney Character ${oneDisney.name}" title="Disney Character ${oneDisney.name}"/>
+                <div><i class="fa-solid fa-square-xmark icon" style="color: #000000;"></i></div>
               </div>
             </li>`;
   }

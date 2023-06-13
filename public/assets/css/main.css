@@ -82,6 +82,11 @@ header {
   margin: 10px;
   border-radius: 10px; }
 
+.icon {
+  color: red; }
+  .icon:hover {
+    color: black; }
+
 .form {
   display: flex;
   justify-content: center;
