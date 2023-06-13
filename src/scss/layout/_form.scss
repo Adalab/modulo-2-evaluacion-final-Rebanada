@@ -14,4 +14,8 @@
 .form_button {
   border-radius: 5px;
   background-color: $coral;
+  cursor: pointer;
+  &:hover {
+    color: blue;
+  }
 }

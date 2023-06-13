@@ -26,7 +26,7 @@ function handleClickRemoveFavorite(event) {
   console.log(idSelected);
   const favoriteFoundIndex = favoritesDisney.findIndex(
     (fav) => fav._id === idSelected
-  );                                                                                                                                                                                                                                                                                                                                            
+  );
   favoritesDisney.splice(favoriteFoundIndex, 1);
   localStorage.setItem('characters', JSON.stringify(favoritesDisney));
 
@@ -44,7 +44,7 @@ function renderDisney(dataDisney) {
         ? oneDisney.imageUrl[0].url
         : 'https://via.placeholder.com/210x295/ffffff/555555/?text=Disney';
 
-    html += `<li class="js-list-disney js_li_characters disney_characters_list" id="${oneDisney._id}">
+    html += `<li class="js-list-disney js_li_characters card disney_characters_list" id="${oneDisney._id}">
               <div class="js-container-disney">
                 <h3 class="js-name-disney disney_characters-list-name" id="${oneDisney._id}">${oneDisney.name}</h3>
                 <img class="disney_characters-list-image" src="${oneDisney.imageUrl}" alt="Disney Character ${oneDisney.name}" title="Disney Character ${oneDisney.name}"/>
@@ -101,9 +101,9 @@ function renderFavoriteDisney(favoritesDisney) {
 
     html += `<li class="js-list-disney fav_card disney_favorite_list" id="${oneDisney._id}">
               <div class="js-container-disney">
+                <div class="js_x closed" id="${oneDisney._id}">X</div>
                 <h3 class="js-name-disney disney_characters-list-name" id="${oneDisney._id}">${oneDisney.name}</h3>
-                <img class="disney_characters-list-image" src="${oneDisney.imageUrl}" alt="Disney Character ${oneDisney.name}" title="Disney Character ${oneDisney.name}"/>
-                <div class="js_x" id="${oneDisney._id}">X</div>
+                <img class="disney_characters-list-image" src="${oneDisney.imageUrl}" alt="Disney Character ${oneDisney.name}" title="Disney Character ${oneDisney.name}"/> 
               </div>
             </li>`;
   }

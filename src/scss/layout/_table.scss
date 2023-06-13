@@ -22,6 +22,7 @@
 .disney_favorite_title {
   background-color: $secundary-color;
   color: $coral;
+  font-family: $primary-text;
   font-size: 30px;
   border-radius: 10px;
   text-align: center;
@@ -29,26 +30,37 @@
 .disney_characters_title {
   background-color: $secundary-color;
   color: $coral;
+  font-family: $primary-text;
   border-radius: 10px;
   font-size: 30px;
   text-align: center;
+  
 }
 
 .disney_favorite_list {
+  text-transform: uppercase;
   list-style-type: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50vh;
   gap: 10px;
+  margin-top: 10px;
+  text-align: center;
+
 }
 .disney_characters_list {
   display: flex;
   font-family: $primary-text;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
   width: 50vh;
+  margin-top: 10px;
   list-style-type: none;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .fav_card {
@@ -58,11 +70,31 @@
   margin: 10px;
   border-radius: 10px;
 }
-
+.card{
+  background-color: lightblue;
+  border-radius: 10px;
+  &:hover {
+    color: $coral;
+  }
+}
 .icon {
   color: red;
 
   &:hover {
     color: black;
+  }
+}
+
+.closed {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  color: black;
+  font-size: xx-large;
+  border: solid 5px;
+  margin: 10px;
+
+  &:hover {
+    color: red;
   }
 }
