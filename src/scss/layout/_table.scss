@@ -49,8 +49,8 @@
 }
 .disney_characters_list {
   display: flex;
-  font-family: $primary-text;
   justify-content: center;
+  font-family: $primary-text;
   flex-wrap: wrap;
   gap: 10px;
   width: 50vh;
