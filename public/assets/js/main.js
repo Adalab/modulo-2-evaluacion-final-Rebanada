@@ -19,17 +19,18 @@ function init() {
     renderFavoriteDisney(favoritesDisney);
   }
 }
-//Quitar de favoritos pulsando en los fav
-function handleClickRemoveFavorite(id) {
-  const idSelected = parseInt(id);
 
-  const favoriteFoundIndex = favoritesDisney.findIndex((fav)=> fav._id === idSelected);
-  if(favoriteFoundIndex >= 0){
-    favoritesDisney.splice(favoriteFoundIndex,1);
-  }
-  localStorage.setItem('favorites_disney', JSON.stringify(favoritesDisney));
-  
-  renderFavoriteDisney();
+//Quitar de favoritos pulsando en los fav
+function handleClickRemoveFavorite(event) {
+  const idSelected = parseInt(event.currentTarget.id);
+  console.log(idSelected);
+  const favoriteFoundIndex = favoritesDisney.findIndex(
+    (fav) => fav._id === idSelected
+  );                                                                                                                                                                                                                                                                                                                                            
+  favoritesDisney.splice(favoriteFoundIndex, 1);
+  localStorage.setItem('characters', JSON.stringify(favoritesDisney));
+
+  renderFavoriteDisney(favoritesDisney);
 }
 
 // FUNCIONES
@@ -98,16 +99,17 @@ function renderFavoriteDisney(favoritesDisney) {
         ? oneDisney.imageUrl[0].url
         : 'https://via.placeholder.com/210x295/ffffff/555555/?text=Disney';
 
-    html += `<li class="js-list-disney js_li_characters fav_card disney_favorite_list" id="${oneDisney._id}">
+    html += `<li class="js-list-disney fav_card disney_favorite_list" id="${oneDisney._id}">
               <div class="js-container-disney">
                 <h3 class="js-name-disney disney_characters-list-name" id="${oneDisney._id}">${oneDisney.name}</h3>
                 <img class="disney_characters-list-image" src="${oneDisney.imageUrl}" alt="Disney Character ${oneDisney.name}" title="Disney Character ${oneDisney.name}"/>
-                <div><i class="fa-solid fa-square-xmark icon" style="color: #000000;"></i></div>
+                <div class="js_x" id="${oneDisney._id}">X</div>
               </div>
             </li>`;
   }
 
-  favoriteList.innerHTML = html;
+  favoriteList.innerHTML += html;
+  HandleReset();
 }
 // Evento botón de búsqueda
 const handleClickSearch = (event) => {
@@ -119,6 +121,13 @@ const handleClickSearch = (event) => {
   console.log(filterList);
   renderDisney(filterList);
 };
+
+function HandleReset() {
+  const allx = document.querySelectorAll('.js_x');
+  for (const resetx of allx) {
+    resetx.addEventListener('click', handleClickRemoveFavorite);
+  }
+}
 
 btnSearch.addEventListener('click', handleClickSearch);
 
