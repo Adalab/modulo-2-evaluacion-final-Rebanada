@@ -75,22 +75,17 @@
     color: $coral;
   }
 }
-.icon {
-  color: red;
-
-  &:hover {
-    color: black;
-  }
-}
 
 .closed {
   display: flex;
   cursor: pointer;
+  border-style: none;
   justify-content: center;
   color: black;
   font-size: xx-large;
   border: solid 5px;
   margin: 10px;
+  
 
   &:hover {
     color: red;
